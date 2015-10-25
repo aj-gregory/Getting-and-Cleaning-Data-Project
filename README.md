@@ -12,7 +12,7 @@ The best way to view the results of the `run_analysis.R` script is to load the `
 ## Summary of steps taken by run_analysis.R
 1. (line 2) Load the `plyr` package. This will be used for the `ddply` function to find the means of each variable in the final step.
 2. (lines 4-11) Read in all relevant data from the UCI HAR Dataset.
-3. (lines 14-16) Append `x.test` to `x.train`, `y.test` to `y.train`, and `subject.test` to `subject.train`.
+3. (lines 14-16) Append `x.test` to `x.train`, `y.test` to `y.train`, and `subject.test` to `subject.train` using `rbind()`.
   - This leaves us with three dataframes with 10299 rows each called `x.all`, `y.all`, and `subject.all`.
   - `x.all` represents the measured data for each trial.
   - `y.all` represents the activity being performed in each trial.
@@ -25,10 +25,10 @@ The best way to view the results of the `run_analysis.R` script is to load the `
 5. (line 25) Extract columns from `x.all` that correspond to mean and standard deviation variables.
   - This is done by filtering on any column names containing "mean()" or "std()".
   - "meanFreq()" columns are not retained as they are not relevant to the true mean of the data.
-6. (lines 28-29) Convert `y.all` to a factor of activity names.
+6. (lines 28-29) Convert `y.all` to a factor of activity names with descriptive labels.
   - First `y.all` is converted into a factor. Then the levels of the resulting factor are set in accordance with the activity labels provided by the UCI HAR Dataset.
 7. (line 32) Combine `subject.all`, `y.all`, and `x.all`.
   - The three dataframes are combined using `cbind()` so that the resulting data frame has one column named "Subject", one column named "Activity", then one column per mean or standard deviation variable extracted in step 5.
 8. (line 35) Create final dataframe of the mean of each variable per subject and activity.
-  - This is done with the `ddply` function.
-  - The `numcolwise` function is used to specify that we want the mean function applied to every column other than the category columns "Subject" and "Activity"
+  - This is done with the `ddply()` function.
+  - The `numcolwise()` function is used to specify that we want the mean function applied to every column other than the category columns "Subject" and "Activity"
