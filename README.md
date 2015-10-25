@@ -27,5 +27,5 @@ To run this script you must have the UCI HAR Dataset and `run_analysis.R` in you
 7. (line 32) Combine `subject.all`, `y.all`, and `x.all`.
   - The three dataframes are combined using `cbind()` so that the resulting data frame has one column named "Subject", one column named "Activity", then one column per mean or standard deviation variable extracted in step 5.
 8. (line 35) Create final dataframe of the mean of each variable per subject and activity.
-  - This is done with the ddply function.
-  - The numcolwise() function is used to specify that we want the mean function applied to every column other than the category columns "Subject" and "Activity"
+  - This is done with the `ddply` function.
+  - The `numcolwise` function is used to specify that we want the mean function applied to every column other than the category columns "Subject" and "Activity"
