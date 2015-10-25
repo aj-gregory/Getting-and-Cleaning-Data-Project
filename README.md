@@ -1,5 +1,8 @@
 # Getting and Cleaning Data: Course Project
 
+## Info on raw data
+The raw data for this analysis was collected by the UCI Center for Machine Learning and Intelligent Systems. Information can be found at this site: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
 ## Running the script
 To run this script you must have the UCI HAR Dataset and `run_analysis.R` in your working directory. Then call `run_analysis()` and the output will be a tidy dataset of the mean of each mean or standard deviation variable per subject and activity. You must also have the `plyr` package installed.
 
