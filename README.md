@@ -1,15 +1,15 @@
 # Getting and Cleaning Data: Course Project
 
-## Viewing results
-The best way to view the results of the `run_analysis.R` script is to load the `completed_assignment.txt` file into R with `data <- read.table('completed_assignment.txt', header = TRUE)` and then `View(data)`
-
 ## Running the script
 To run this script you must have the UCI HAR Dataset and `run_analysis.R` in your working directory. Then call `run_analysis()` and the output will be a tidy dataset of the mean of each mean or standard deviation variable per subject and activity. You must also have the `plyr` package installed.
+
+## Viewing results
+The best way to view the results of the `run_analysis.R` script is to load the `completed_assignment.txt` file into R with `data <- read.table('completed_assignment.txt', header = TRUE)` and then `View(data)`
 
 ## Summary of steps taken by run_analysis.R
 1. (line 2) Load the `plyr` package. This will be used for the `ddply` function to find the means of each variable in the final step.
 2. (lines 4-11) Read in all relevant data from the UCI HAR Dataset.
-3. (lines 14-16) Append `x.test` to `x.train`, `y.test` to 'y.train', and `subject.test` to `subject.train`.
+3. (lines 14-16) Append `x.test` to `x.train`, `y.test` to `y.train`, and `subject.test` to `subject.train`.
   - This leaves us with three dataframes with 10299 rows each called `x.all`, `y.all`, and `subject.all`.
   - `x.all` represents the measured data for each trial.
   - `y.all` represents the activity being performed in each trial.
