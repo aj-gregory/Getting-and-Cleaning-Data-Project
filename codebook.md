@@ -5,6 +5,8 @@ The first two columns indicate which subject is performing the tests and which a
 
 For detailed information on how the raw data was collected refer to the UCI Machine Learning Repository linked in `README.md`.
 
+All units in this dataset have been normalized.
+
 # Variables by column
 1. "Subject"
   - The subject performing the test.
