@@ -3,6 +3,8 @@ Each row in the final dataset represents one combination of subject and activity
 
 The first two columns indicate which subject is performing the tests and which activity is being performed. The remaining columns represent the mean of the measured values for each feature for a particular subject and activity.
 
+For detailed information on how the raw data was collected refer to the UCI Machine Learning Repository linked in `README.md`.
+
 # Variables by column
 1. "Subject"
   - The subject performing the test.
@@ -102,69 +104,43 @@ The first two columns indicate which subject is performing the tests and which a
   - Mean of measured results for this feature per subject and activity
 48. "fBodyAcc-std()-Z"
   - Mean of measured results for this feature per subject and activity
-49. "fBodyAcc-meanFreq()-X"
+49. "fBodyAccJerk-mean()-X"
   - Mean of measured results for this feature per subject and activity
-50. "fBodyAcc-meanFreq()-Y"
+50. "fBodyAccJerk-mean()-Y"
   - Mean of measured results for this feature per subject and activity
-51. "fBodyAcc-meanFreq()-Z"
+51. "fBodyAccJerk-mean()-Z"
   - Mean of measured results for this feature per subject and activity
-52. "fBodyAccJerk-mean()-X"
+52. "fBodyAccJerk-std()-X"
   - Mean of measured results for this feature per subject and activity
-53. "fBodyAccJerk-mean()-Y"
+53. "fBodyAccJerk-std()-Y"
   - Mean of measured results for this feature per subject and activity
-54. "fBodyAccJerk-mean()-Z"
+54. "fBodyAccJerk-std()-Z"
   - Mean of measured results for this feature per subject and activity
-55. "fBodyAccJerk-std()-X"
+55. "fBodyGyro-mean()-X"
   - Mean of measured results for this feature per subject and activity
-56. "fBodyAccJerk-std()-Y"
+56. "fBodyGyro-mean()-Y"
   - Mean of measured results for this feature per subject and activity
-57. "fBodyAccJerk-std()-Z"
+57. "fBodyGyro-mean()-Z"
   - Mean of measured results for this feature per subject and activity
-58. "fBodyAccJerk-meanFreq()-X"
+58. "fBodyGyro-std()-X"
   - Mean of measured results for this feature per subject and activity
-59. "fBodyAccJerk-meanFreq()-Y"
+59. "fBodyGyro-std()-Y"
   - Mean of measured results for this feature per subject and activity
-60. "fBodyAccJerk-meanFreq()-Z"
+60. "fBodyGyro-std()-Z"
   - Mean of measured results for this feature per subject and activity
-61. "fBodyGyro-mean()-X"
+61. "fBodyAccMag-mean()"
   - Mean of measured results for this feature per subject and activity
-62. "fBodyGyro-mean()-Y"
+62. "fBodyAccMag-std()"
   - Mean of measured results for this feature per subject and activity
-63. "fBodyGyro-mean()-Z"
+63. "fBodyBodyAccJerkMag-mean()"
   - Mean of measured results for this feature per subject and activity
-64. "fBodyGyro-std()-X"
+64. "fBodyBodyAccJerkMag-std()"
   - Mean of measured results for this feature per subject and activity
-65. "fBodyGyro-std()-Y"
+65. "fBodyBodyGyroMag-mean()"
   - Mean of measured results for this feature per subject and activity
-66. "fBodyGyro-std()-Z"
+66. "fBodyBodyGyroMag-std()"
   - Mean of measured results for this feature per subject and activity
-67. "fBodyGyro-meanFreq()-X"
+67. "fBodyBodyGyroJerkMag-mean()"
   - Mean of measured results for this feature per subject and activity
-68. "fBodyGyro-meanFreq()-Y"
-  - Mean of measured results for this feature per subject and activity
-69. "fBodyGyro-meanFreq()-Z"
-  - Mean of measured results for this feature per subject and activity
-70. "fBodyAccMag-mean()"
-  - Mean of measured results for this feature per subject and activity
-71. "fBodyAccMag-std()"
-  - Mean of measured results for this feature per subject and activity
-72. "fBodyAccMag-meanFreq()"
-  - Mean of measured results for this feature per subject and activity
-73. "fBodyBodyAccJerkMag-mean()"
-  - Mean of measured results for this feature per subject and activity
-74. "fBodyBodyAccJerkMag-std()"
-  - Mean of measured results for this feature per subject and activity
-75. "fBodyBodyAccJerkMag-meanFreq()"
-  - Mean of measured results for this feature per subject and activity
-76. "fBodyBodyGyroMag-mean()"
-  - Mean of measured results for this feature per subject and activity
-77. "fBodyBodyGyroMag-std()"
-  - Mean of measured results for this feature per subject and activity
-78. "fBodyBodyGyroMag-meanFreq()"
-  - Mean of measured results for this feature per subject and activity
-79. "fBodyBodyGyroJerkMag-mean()"
-  - Mean of measured results for this feature per subject and activity
-80. "fBodyBodyGyroJerkMag-std()"
-  - Mean of measured results for this feature per subject and activity
-81. "fBodyBodyGyroJerkMag-meanFreq()"
+68. "fBodyBodyGyroJerkMag-std()"
   - Mean of measured results for this feature per subject and activity

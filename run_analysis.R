@@ -22,7 +22,7 @@ run_analysis <- function() {
   names(subject.all) <- ('Subject')
 
   #extract mean and standard deviation measurements based on column names
-  x.all <- x.all[,grepl("mean|std", names(x.all))]
+  x.all <- x.all[,grepl("mean\\(\\)|std\\(\\)", names(x.all))]
 
   #convert y.all into a factor of activity names and rename column
   y.all[,1] <- as.factor(y.all[,1])

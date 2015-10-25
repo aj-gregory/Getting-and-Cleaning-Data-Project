@@ -7,7 +7,7 @@ The raw data for this analysis was collected by the UCI Center for Machine Learn
 To run this script you must have the UCI HAR Dataset and `run_analysis.R` in your working directory. Then call `run_analysis()` and the output will be a tidy dataset of the mean of each mean or standard deviation variable per subject and activity. You must also have the `plyr` package installed.
 
 ## Viewing results
-The best way to view the results of the `run_analysis.R` script is to load the `completed_assignment.txt` file into R with `data <- read.table('completed_assignment.txt', header = TRUE)` and then `View(data)`
+The best way to view the results of the `run_analysis.R` script is to load the `tidy_data.txt` file into R with `data <- read.table('tidy_data.txt', header = TRUE)` and then `View(data)`
 
 ## Summary of steps taken by run_analysis.R
 1. (line 2) Load the `plyr` package. This will be used for the `ddply` function to find the means of each variable in the final step.
@@ -23,8 +23,8 @@ The best way to view the results of the `run_analysis.R` script is to load the `
   - `y.all` contains only one column and it is given the name 'Activity'.
   - `subject.all` contains only one column and it is given the name 'Subject'.
 5. (line 25) Extract columns from `x.all` that correspond to mean and standard deviation variables.
-  - This is done by filtering on any column names containing "mean" or "std".
-  - The decision was made to retain `meanFreq` columns due to the fact that it was not explicitly stated weather these columns were needed or not and it would be trivial to ignore or remove these columns whereas adding them back in would be more difficult.
+  - This is done by filtering on any column names containing "mean()" or "std()".
+  - "meanFreq()" columns are not retained as they are not relevant to the true mean of the data.
 6. (lines 28-29) Convert `y.all` to a factor of activity names.
   - First `y.all` is converted into a factor. Then the levels of the resulting factor are set in accordance with the activity labels provided by the UCI HAR Dataset.
 7. (line 32) Combine `subject.all`, `y.all`, and `x.all`.
