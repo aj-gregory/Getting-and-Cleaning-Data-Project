@@ -19,7 +19,7 @@ run_analysis <- function() {
   names(x.all) <- features[,2]
   #appropriately rename y.all and subject.all columns
   names(y.all) <- c('Activity')
-  names(subject.all) <- ('Subject')
+  names(subject.all) <- c('Subject')
 
   #extract mean and standard deviation measurements based on column names
   x.all <- x.all[,grepl("mean\\(\\)|std\\(\\)", names(x.all))]
